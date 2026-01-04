@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="logo-bar">
+        <span class="title">Your <i class="fa-solid fa-heart"></i> Music Player!</span>
         <div class="logo-icons">
             <div class="guitar"><i class="fa-solid fa-guitar"></i></div>
             <div class="music"><i class="fa-solid fa-music"></i></div>
@@ -18,7 +19,18 @@
     </div>
 
     <div class="main-container">
-    <div class="songs-list-section"></div>
+    <div class="songs-list-section">
+        <ul class="songs-list">
+            <li id="first-item" class="song" data-song-id="1">
+                <div class="song__info">
+                    <img src="Songs/Cover/bluimg.jpg" alt="Song Cover img">
+                    <div class="song__title">Blu - Zachz Winner</div>
+                </div>
+                <audio class="song__audio" src="Songs/Music/blu.mp3"></audio>
+                <i class="fa-solid fa-play"></i>
+            </li>
+        </ul>
+    </div>
     <div class="current-song-display">
         <div class="song-progress-bar"></div>
     </div>

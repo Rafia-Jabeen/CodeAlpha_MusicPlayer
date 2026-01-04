@@ -1,26 +1,45 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 .logo-bar{
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     background-color: #49111c;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    color: #f2f4f3;
+    font-size: 1.5rem;
+    align-self: center;
+    padding-left: 1.5%;
+    font-family:sans-serif;
+}
+.title i{
+    transition: color 0.2s ease-in;
+}
+.title i:hover{
+    color: rgb(158, 3, 3);
 }
 .logo-icons{
     display: flex;
     justify-content: center;
     gap: 5px;
+    align-self: center;
+    padding-right: 2%;
 }
 .guitar, .drum{
     color: #f2f4f3;
-    font-size: 7vh;
+    font-size: 2rem;
     padding-top:2vh;
 }
 .music{
-    color: #0a0908;
-    font-size: 7vh;
+    color: #f2f4f3;
+    font-size: 1.5rem;
     padding-bottom:2vh;
+    padding-top: 1vh;
 }
 .main-container{
     width: 100%;
@@ -28,12 +47,13 @@
     display: flex;
 }
 .songs-list-section{
-    width: 30%;
+    width: 20%;
     height: 90vh;
     background-color: #0a0908;
+    color: #f2f4f3;
 }
 .current-song-display{
-    width: 70%;
+    width: 80%;
     height: 90vh;
     background-color: #f2f4f3;
     display: flex;
@@ -45,4 +65,48 @@
     width: 100%;
     height: 10vh;
     background-color:#49111c;
+}
+.songs-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding-left: 5%;
+    padding-right: 2%;
+}
+#first-item{
+    padding-top: 2.2vh;
+}
+.songs-list li{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-size: 1rem;
+}
+.song__info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.song__info img{
+    height: 7vh;
+    width: 7vh;
+}
+
+@media (max-width: 444px) {
+    .title{
+        font-size: 1rem;
+    }
+    .logo-icons{
+        font-size: 1.5rem;
+        gap:2px;
+    }
+    .songs-list-section{
+    width: 47%;
+    }
+}
+@media (max-width: 884px){
+    .songs-list-section{
+    width: 40%;
+    }
 }
