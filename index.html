@@ -25,7 +25,7 @@
 
                 <li id="first-item" class="song" data-song-id="1">
                     <div class="song__info">
-                        <img src="Songs/Cover/bluimg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/bluimg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Blu</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/blu.mp3"></audio>
@@ -34,7 +34,7 @@
 
                 <li class="song" data-song-id="2">
                     <div class="song__info">
-                        <img src="Songs/Cover/harinezumi.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/harinezumi.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Harinezumi</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/harinezumi.mp3"></audio>
@@ -43,7 +43,7 @@
 
                 <li class="song" data-song-id="3">
                     <div class="song__info">
-                        <img src="Songs/Cover/jealousimg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/jealousimg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Jealous</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/jealous.mp3"></audio>
@@ -52,7 +52,7 @@
 
                 <li class="song" data-song-id="4">
                     <div class="song__info">
-                        <img src="Songs/Cover/silenceimg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/silenceimg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Silence</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/Silence.mp3"></audio>
@@ -61,7 +61,7 @@
 
                 <li class="song" data-song-id="5">
                     <div class="song__info">
-                        <img src="Songs/Cover/stuckinmyheadimg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/stuckinmyheadimg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Stuck in my head</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/stuckinmyhead.mp3"></audio>
@@ -70,7 +70,7 @@
 
                 <li class="song" data-song-id="6">
                     <div class="song__info">
-                        <img src="Songs/Cover/superheroimg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/superheroimg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Superhero</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/superHero.mp3"></audio>
@@ -79,7 +79,7 @@
 
                 <li class="song" data-song-id="7">
                     <div class="song__info">
-                        <img src="Songs/Cover/takingItSlowimg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/takingItSlowimg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Taking it slow</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/TakingItSlow.mp3"></audio>
@@ -88,7 +88,7 @@
 
                 <li class="song" data-song-id="8">
                     <div class="song__info">
-                        <img src="Songs/Cover/theSkyhigh.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/theSkyhigh.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">The Sky High</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/TheSkyHigh.mp3"></audio>
@@ -97,7 +97,7 @@
 
                 <li class="song" data-song-id="9">
                     <div class="song__info">
-                        <img src="Songs/Cover/whereWeAreImg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/whereWeAreImg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Where we are</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/whereWeAre.mp3"></audio>
@@ -106,7 +106,7 @@
 
                 <li class="song" data-song-id="10">
                     <div class="song__info">
-                        <img src="Songs/Cover/win&loseimg.jpg" alt="Song Cover img">
+                        <img src="Songs/Cover/win&loseimg.jpg" alt="Song Cover img" preload="metadata">
                         <div class="song__title">Win & lose</div>
                     </div>
                     <audio class="song__audio" src="Songs/Music/Win&Lose.mp3"></audio>
@@ -116,23 +116,47 @@
         </div>
 
         <div class="hero-section">
-            <div class="hero-img"><img src="Songs/Cover/music.jpg" alt="hero-image"></div>
+            <div class="hero-img"><img src="Songs/Cover/music.jpg" alt="hero-image" ></div>
         </div>
 
     </div>
 
     <div class="song-functions">
-        <div class="song-progress-bar">
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: 60%"></div>
+        <div class="song-controls-bar">
+            <div class="song-progress-bar">
+                <span id="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                <span id="total-duration">0:00</span>
+            </div>
+
+            <div class="second-line">
+                <div class="song__info current-song-info">
+                                <img id="current-cover" src="Songs/Cover/bluimg.jpg" alt="Song Cover img" >
+                                <div id="current-title" class="song__title">Blu</div>
+                </div>
+            
+                <div class="control-bts">
+                    <i id="previous-btn" class="fa-solid fa-backward-step"></i>
+                    <i id="play-btn" class="fa-solid fa-play"></i>
+                    <i id="next-btn" class="fa-solid fa-forward-step"></i>
+                </div>
+
+                <div class="volume-control">
+                    <i id="volume-icon" class="fa-solid fa-volume-high"></i>
+                    <input
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="1"
+                        id="volume-slider"
+                    />
+                </div>
             </div>
         </div>
-        
-        <div class="control-bts">
-            <i class="fa-solid fa-backward-step"></i>
-            <i class="fa-solid fa-play"></i>
-            <i class="fa-solid fa-forward-step"></i>
-        </div>
+
     </div>
 
     <script src="script.js"></script>

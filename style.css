@@ -21,9 +21,6 @@
 .title i{
     transition: color 0.2s ease-in;
 }
-.title:hover{
-    text-shadow: 2px 2px 4px rgba(226, 221, 221, 0.3);
-}
 .title i:hover{
     color: rgb(158, 3, 3);
 }
@@ -114,6 +111,17 @@
     width: 100%;
     height: 12vh;
     background-color:#0a0908;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.song-controls-bar{
+    width: 80%;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f2f4f3;
 }
 .song-progress-bar{
     width: 100%;
@@ -121,6 +129,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 .progress-bar {
     align-self: center;
@@ -135,18 +144,53 @@
   background: #3b82f6;
   border-radius: 5px;
 }
+.second-line{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.current-song-info{
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+#current-cover{
+    height:6vh ;
+    width:6vh ;
+}
 .control-bts{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin-right: 5%;
 }
 .control-bts i{
     color: #f2f4f3;
     font-size: 1.7rem;
     text-align: center;
 }
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.volume-control i {
+  color: #f2f4f3;
+  font-size: 1.2rem;
+}
+
+.volume-control input {
+  width: 100px;
+  cursor: pointer;
+}
+
 
 @media (max-width: 444px) {
     .title{
